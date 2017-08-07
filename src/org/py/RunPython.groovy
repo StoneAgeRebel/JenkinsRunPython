@@ -6,8 +6,10 @@ def runPython(python_interp, python_script, debug=false) {
     def pythonScript = new File("$python_script")
     if (debug){
         println("DEBUG")
+        println(" absolute Path")
         println("pythonScript = $pythonScript.absolutePath")
-        println(pythonScript.canonicalFile)
+        println("CanonicalPath")
+        println(pythonScript.getCanonicalPath())
     }
 
     if(!pythonInt.exists()){
