@@ -6,6 +6,7 @@ def runPython(script, python_interp, python_script, debug=false) {
     def pythonScript = new File("$python_script")
     if (debug){
         println("DEBUG")
+        println(script)
         println(" absolute Path")
         println("pythonScript = $pythonScript.absolutePath")
         println("CanonicalPath")
@@ -27,6 +28,6 @@ def runPython(script, python_interp, python_script, debug=false) {
         process.inputStream.eachLine { println(it) }
     }
 }
-runPython("/usr/local/bin/python3", "helloWorld.py", true)
+//runPython("/usr/local/bin/python3", "helloWorld.py", true)
 return this;
 //runPython("/usr/local/bin/python3", "--version")
