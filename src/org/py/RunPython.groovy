@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 package org.py;
 
-def runPython(python_interp, python_script, debug=false) {
+def runPython(script, python_interp, python_script, debug=false) {
     def pythonInt = new File("$python_interp")
     def pythonScript = new File("$python_script")
     if (debug){
