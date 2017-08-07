@@ -1,3 +1,4 @@
+#!/usr/bin/groovy
 package org.py;
 
 def runPython(python_interp, python_script) {
@@ -17,11 +18,8 @@ def runPython(python_interp, python_script) {
         processBuilder.redirectErrorStream(true)
         def process = processBuilder.start()
         process.inputStream.eachLine { println(it) }
-
     }
-
-
 }
 return this;
-//runPython("/usr/local/bin/python3", "../data/helloWorld.py")
+//runPython("/usr/local/bin/python3", "../../../data/helloWorld.py")
 //runPython("/usr/local/bin/python3", "--version")
