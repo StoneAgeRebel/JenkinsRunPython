@@ -23,7 +23,7 @@ def runPython(script, python_interp, python_script, debug=false) {
     }
 
     if (pythonInt.exists() && pythonScript.exists()){
-        def processBuilder = new ProcessBuilder("$pythonInt.path $python_script".split(" "))
+        def processBuilder = new ProcessBuilder("$pythonInt.path $pythonScript.absolutePath".split(" "))
         processBuilder.redirectErrorStream(true)
         def process = processBuilder.start()
         process.inputStream.eachLine { println(it) }
