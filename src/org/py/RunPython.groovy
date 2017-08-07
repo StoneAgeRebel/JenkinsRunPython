@@ -7,7 +7,7 @@ def runPython(python_interp, python_script, debug=false) {
     if (debug){
         println("DEBUG")
         println("pythonScript = $pythonScript.absolutePath")
-//        pythonScript.absolutePath
+        println(pythonScript.canonicalFile)
     }
 
     if(!pythonInt.exists()){
@@ -25,6 +25,6 @@ def runPython(python_interp, python_script, debug=false) {
         process.inputStream.eachLine { println(it) }
     }
 }
+runPython("/usr/local/bin/python3", "helloWorld.py", true)
 return this;
-//runPython("/usr/local/bin/python3", "helloWorld.py", true)
 //runPython("/usr/local/bin/python3", "--version")
