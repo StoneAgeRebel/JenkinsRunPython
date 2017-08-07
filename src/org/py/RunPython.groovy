@@ -6,7 +6,7 @@ def runPython(script, python_interp, python_script, debug=false) {
     def pythonScript = new File("$python_script")
     if (debug){
         println("DEBUG")
-        println(script)
+        println(script.env.WORKSPACE)
         println(" absolute Path")
         println("pythonScript = $pythonScript.absolutePath")
         println("CanonicalPath")
