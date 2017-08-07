@@ -10,7 +10,7 @@ def runPython(python_interp, python_script) {
     }
 
     if(!pythonScript.exists()){
-        throw new FileNotFoundException("Unable to find $python_script'")
+        throw new FileNotFoundException("Unable to find '$python_script'")
     }
 
     if (pythonInt.exists() && pythonScript.exists()){
@@ -21,5 +21,5 @@ def runPython(python_interp, python_script) {
     }
 }
 return this;
-//runPython("/usr/local/bin/python3", "../../../data/helloWorld.py")
+//runPython("/usr/local/bin/python3", "helloWorld.py")
 //runPython("/usr/local/bin/python3", "--version")
