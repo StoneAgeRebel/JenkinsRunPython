@@ -1,19 +1,9 @@
 #!/usr/bin/groovy
 package org.py;
 
-def runPython(script, python_interp, python_script, debug=false) {
+def runPython(script, python_interp, python_script) {
     def pythonInt = new File("$python_interp")
     def pythonScript = new File("$script.env.WORKSPACE", "$python_script")
-
-    if (debug){
-        println("DEBUG")
-        println(script.env.WORKSPACE)
-        println(" absolute Path")
-        println("pythonScript = $pythonScript.absolutePath")
-        println("CanonicalPath")
-        println(pythonScript.getCanonicalPath())
-    }
-
     if(!pythonInt.exists()){
         throw new FileNotFoundException("Unable to find $python_interp")
     }
@@ -29,7 +19,4 @@ def runPython(script, python_interp, python_script, debug=false) {
         process.inputStream.eachLine { println(it) }
     }
 }
-println( new File("/temp", "dummy.xlx"))
-//runPython("/usr/local/bin/python3", "helloWorld.py", true)
 return this;
-//runPython("/usr/local/bin/python3", "--version")
