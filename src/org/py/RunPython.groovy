@@ -1,4 +1,4 @@
-package org.py
+package org.py;
 
 def runPython(python_interp, python_script) {
     def pythonInt = new File("$python_interp")
