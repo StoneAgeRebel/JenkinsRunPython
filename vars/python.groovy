@@ -5,6 +5,7 @@ def call(String python_script = "dummy"){
 //    def files = findFiles(python_script)
 //    println(files.type)
     println(files)
+    println(files[0])
     echo "files = ${files}"
 
 }
