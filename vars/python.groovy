@@ -4,8 +4,10 @@ def call(String python_script = "dummy"){
     def files = findFiles(glob: "*.*")
 //    def files = findFiles(python_script)
 //    println(files.type)
-    println(files)
-    println(files[0])
     echo "files = ${files}"
+    println(files)
+    println(files.getPath())
+    println(files[0])
+    println(files[0].getPath())
 
 }
