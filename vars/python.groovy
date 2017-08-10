@@ -6,7 +6,7 @@ def call(String python_script = "dummy"){
 //    println(files.type)
     echo "files = ${files}"
     println(files)
-    println(files.getPath())
+//    println(files.getPath())
     println(files[0])
     println(files[0].getPath())
 
