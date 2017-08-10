@@ -8,6 +8,9 @@ def call(String python_script = "dummy"){
     println(files)
 //    println(files.getPath())
     println(files[0])
+    echo "getPath"
     println(files[0].getPath())
+    echo "getName"
+    println(files[0].getName())
 
 }
