@@ -8,6 +8,7 @@ def call(String python_script){
     } else {
         echo "no exist"
     }
+    echo "all done"
 //    println("I got a file and it's existance is $pyFile")
 //    def s = pyFile.size()
 //    println("I got a file and it's size is $s")
